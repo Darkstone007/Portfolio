@@ -1,0 +1,101 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background-color: #111; /* Dark black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05); /* Subtle transparent background */
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 150px; /* Adjust the size of the logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Welcome Text */
+.welcome-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff; /* White text */
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ccc; /* Soft grey text */
+  margin-bottom: 30px;
+}
+
+/* Enter Button */
+.enter-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111; /* Dark text for contrast */
+  background-color: #fff; /* White button */
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.enter-btn:hover {
+  background-color: #444;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .welcome-text h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-text p {
+    font-size: 1rem;
+  }
+
+  .enter-btn {
+    padding: 10px 15px;
+  }
+}
