@@ -225,7 +225,10 @@ void loop() {
     photos.forEach(photo => {
       const card = document.createElement('div');
       card.className = 'media-card';
-      card.innerHTML = `<img src="${photo.src}" alt="${photo.title}">`;
+      card.innerHTML = `
+        <img src="${photo.src}" alt="${photo.title}">
+        <h3>${photo.title}</h3>
+      `;
       photoGallery.appendChild(card);
     });
   }
@@ -236,7 +239,10 @@ void loop() {
     videos.forEach(video => {
       const card = document.createElement('div');
       card.className = 'media-card';
-      card.innerHTML = `<iframe src="${video.src}" title="${video.title}" frameborder="0" allowfullscreen></iframe>`;
+      card.innerHTML = `
+        <iframe src="${video.src}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>${video.title}</h3>
+      `;
       videoGallery.appendChild(card);
     });
   }
@@ -266,7 +272,7 @@ void loop() {
         // Embed YouTube video in modal if available
         const videoId = project.youtube.match(/(?:v=|youtu\.be\/)([^&?]+)/)?.[1];
         if (videoId) {
-          modalMedia.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" title="${project.title}" frameborder="0" allowfullscreen></iframe>`;
+          modalMedia.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" title="${project.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         }
       }
       if (project.code) {
