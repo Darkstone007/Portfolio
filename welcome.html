@@ -1,15 +1,15 @@
-<!-- Welcome page for the portfolio -->
+<!-- Welcome page with Instagram feed and expanded welcome message -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta tags for SEO and responsiveness -->
+  <!-- Meta tags for SEO and responsive viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to David Ziklag Foster's portfolio.">
+  <meta name="description" content="Welcome to David Ziklag Foster's portfolio, showcasing creative technology and storytelling.">
   <title>Welcome | David Ziklag Foster</title>
-  <!-- Google Fonts -->
+  <!-- Google Fonts for Poppins (headings) and Roboto (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <!-- Main styles -->
+  <!-- Main styles for layout and design -->
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -24,18 +24,34 @@
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="uploads.html">Uploads</a></li>
+      <li><a href="Uploads.html">Uploads</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <!-- Dark/light mode toggle button -->
+    <!-- Dark/light mode toggle -->
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
   <!-- Main content area -->
   <div class="content">
+    <!-- Welcome section with expanded message -->
     <section class="section">
       <h1>Welcome</h1>
-      <p>Hi, I’m <strong>David Ziklag Foster</strong>, a creative technologist at NYU Abu Dhabi. I blend technology, storytelling, and design to create engaging experiences.</p>
+      <p>Hi, I’m <strong>David Ziklag Foster</strong>, a creative technologist at NYU Abu Dhabi. I’m passionate about blending technology with storytelling to craft immersive experiences, from game design to poetry. Dive into my work and let’s connect to create something extraordinary!</p>
       <a href="projects.html" class="btn">Explore My Work</a>
+      <!-- Social media links -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/bo3ta._/" target="_blank" aria-label="Visit David's Instagram">
+          <img src="Media/instagram-icon.png" alt="Instagram Icon">
+        </a>
+        <a href="https://intro.nyuadim.com/author/dzf3361/" target="_blank" aria-label="Visit David's NYUADIM Profile">
+          <img src="Media/nyuadim-icon.png" alt="NYUADIM Icon">
+        </a>
+      </div>
+    </section>
+    <!-- Instagram feed section -->
+    <section class="section instagram-feed">
+      <h2>My Instagram</h2>
+      <!-- LightWidget iframe for Instagram feed (@bo3ta._) -->
+      <iframe src="https://lightwidget.com/widgets/YOUR_LIGHTWIDGET_ID.html" class="lightwidget-widget" allowtransparency="true" scrolling="no"></iframe>
     </section>
   </div>
   <!-- JavaScript for interactivity -->
