@@ -207,6 +207,39 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Social links styling */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Instagram feed styling */
+.instagram-feed {
+  text-align: center;
+}
+
+.lightwidget-widget {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px; /* Adjustable height for feed */
+  border: none;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Modal for project details */
 .modal {
   display: none;
@@ -298,6 +331,9 @@ body {
   .media-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
   }
+  .lightwidget-widget {
+    height: 300px; /* Adjust feed height */
+  }
 }
 
 @media (max-width: 768px) {
@@ -307,18 +343,15 @@ body {
     position: relative;
     padding: 10px;
   }
-
   .content {
     margin-left: 0;
   }
-
   .project-grid,
   .media-grid {
     grid-template-columns: 1fr; /* 1 column on small screens */
   }
-
-  .logo {
-    height: 80px;
+  .lightwidget-widget {
+    height: 250px;
   }
 }
 
@@ -326,8 +359,11 @@ body {
   .sidebar ul li a {
     font-size: 16px;
   }
-
   .logo {
     height: 60px;
+  }
+  .social-links img {
+    width: 25px;
+    height: 25px;
   }
 }
