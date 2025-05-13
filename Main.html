@@ -1,103 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="Main.css">
+  <!-- Meta tags for SEO and responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Ziklag Foster's portfolio showcasing interactive media, storytelling, and technical projects.">
+  <meta name="keywords" content="David Foster, portfolio, interactive media, game design, storytelling, NYU Abu Dhabi">
+  <meta name="author" content="David Ziklag Foster">
+  <title>David Ziklag Foster | Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Main.css">
 </head>
 <body>
-    <!-- Sidebar Menu -->
-    <div class="sidebar">
-        <div class="logo"> <a href="index.html"><img src="Media/Logo.jpg" alt="Logo"></a> </div>
-        <ul>
-            <li><a href="index.html"> Home page</a></li>
-            <li><a href="#home">Welcome</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li> 
-        </ul>
+  <!-- Sidebar Menu -->
+  <div class="sidebar">
+    <div class="logo">
+      <a href="index.html"><img src="Media/logo.png" alt="DZF Logo"></a>
     </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#uploads">Uploads</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
 
-    <!-- Main Content -->
-    <div class="content">
-        <!-- Home Section -->
-        <section id="home" class="section">
-            <h1>Welcome to My Portfolio</h1>
-            <p>
-                Hi, I’m <strong>David Foster</strong>, a passionate creative with a background in technology and storytelling. 
-                I specialize in blending visuals, coding, and design to create engaging user experiences. Whether it’s interactive media, visual storytelling, or team projects, my goal is to innovate while focusing on aesthetics and functionality.
-            </p>
-        </section>
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Welcome Section -->
+    <section id="welcome" class="section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>
+        Hi, I’m <strong>David Ziklag Foster</strong>, a creative technologist at NYU Abu Dhabi. 
+        I blend <em>technology, storytelling, and design</em> to create engaging experiences in interactive media, game design, and visual arts.
+      </p>
+      <a href="#projects" class="btn">Explore My Work</a>
+    </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="section">
-            <h1>About Me</h1>
-            <p>
-                Hi, I’m <strong>David Foster</strong>. I love creating stories through <em>technology, visuals, and words</em>. 
-                My interests include interactive media projects, poetry, and photography — I’m always exploring creative possibilities.
-            </p>
-            <p>
-                Outside work, I enjoy <em>reading manga, playing sports, and capturing life’s moments</em>. 
-                Here's a glimpse into my creative world!
-            </p>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h1>About Me</h1>
+      <p>
+        As President of NSBE and a mentor, I combine technical skills (full-stack development, Arduino, Unity) with creative pursuits (poetry, film). 
+        My interests in <em>anime, philosophy, and sports</em> inspire my innovative approach.
+      </p>
+      <p>
+        <strong>Skills:</strong> HTML, CSS, JavaScript, Python, C#, Arduino, Unity, 3D CAD, Video Editing, Poetry, Leadership.
+      </p>
+    </section>
 
-            <!-- Photos and Videos -->
-            <div id= "photos" class="media-gallery">
-                <h2>Photos</h2>
-                <div class="photos">
-                    <img src="Media/india.jpg" alt="India trip">
-                    <img src="Media/Park.jpg" alt="Park with friends">
-                    <img src="Media/podcast.jpg" alt="Podcast">
-                </div>
-                <h2>Videos</h2>
-                <div id= "videos" class="videos">
-                    <iframe width="1200" height="625" src="https://www.youtube.com/embed/P02uKRqClg0?si=U2xBHH0yb2vCsSLb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        Me in the process of creating the website
-                    <iframe width="1200" height="625" src="https://www.youtube.com/embed/nDTWKTSzp40?si=XDYKQowcTNiH-9BS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        Camera set up for a one of my protfolio projects
-                </div>
-            </div>
-        </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h1>Projects</h1>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="technical">Technical</button>
+        <button class="filter-btn" data-filter="creative">Creative</button>
+      </div>
+      <div id="project-gallery" class="project-grid"></div>
+    </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="section">
-            <h1>Portfolio</h1>
-            <p>Explore some of my projects below:</p>
-            <div class="projects">
-                <a href="https://youtu.be/7Cle2RsJGl8?si=QmBFutBJ1Ju2ccX3" target="_blank" id="project4" class="project">
-                    <img src="Media/Im movie.jpg" alt="Project 1">
-                    <p>Project 1: Video Editing</p>
+    <!-- Media Section -->
+    <section id="media" class="section">
+      <h1>Media</h1>
+      <h2>Photos</h2>
+      <div id="photo-gallery" class="media-grid"></div>
+      <h2>Videos</h2>
+      <div id="video-gallery" class="media-grid"></div>
+    </section>
 
-                <a href="https://darkstone007.github.io/Assignment1/" target="_blank" id="project1" class="project">
-                    <img src="Media/project1.jpg" alt="Project 2">
-                    <p>Project 2: Interactive Media</p>
-                </a>
-                <a href="https://iam-agyenim.github.io/Comic/" target="_blank" id="project2" class="project">
-                    <img src="Media/project2.jpg" alt="Project 3">
-                    <p>Project 3: Digital Comic</p>
-                </a>
-                <a href="https://tadilbek11kz.github.io/video-page/" target="_blank" id="project3" class="project">
-                    <img src="Media/project3.jpg" alt="Project 4">
-                    <p>Project 4: Video Design</p>
-                </a>
-                <a href="https://tadilbek11kz.github.io/audio-page/" target="_blank" id="project4" class="project">
-                    <img src="Media/project4.jpg" alt="Project 5">
-                    <p>Project 5: Audio Page</p>
-                </a>
-            </div>
-        </section>
+    <!-- Uploads Section -->
+    <section id="uploads" class="section">
+      <h1>Upload Work</h1>
+      <form id="upload-form" class="upload-form">
+        <label for="file-upload">Upload File (Code, Image, Video):</label>
+        <input type="file" id="file-upload" accept=".js,.py,.html,.css,.jpg,.png,.mp4" multiple>
+        <button type="submit" class="btn">Upload</button>
+      </form>
+      <div id="upload-preview" class="preview"></div>
+      <p class="note">Note: Uploads are simulated. Contact me for backend integration.</p>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h1>Contact Me</h1>
-            <p>Email: <a href="mailto:davidzfoster00700@gmail.com" >davidzfoster00700@gmail.com</a></p>
-            <p>Instagram: <a href="https://www.instagram.com/bo3ta._/" target="_blank">bo3ta._</a></p>
-            <p>Phone: +971 589 542 027</p>
-            <p><a href="Media/David's CV.pdf" download>Download My CV</a></p>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h1>Contact Me</h1>
+      <div class="contact-links">
+        <p>Email: <a href="mailto:davidzfoster00700@gmail.com">davidzfoster00700@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/bo3ta._/" target="_blank">bo3ta._</a></p>
+        <p>Phone: +971 589 542 027</p>
+        <p>NYUADIM: <a href="https://intro.nyuadim.com/author/dzf3361/" target="_blank">My Profile</a></p>
+        <p><a href="Media/David's CV.pdf" download class="btn">Download CV</a></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close" role="button" aria-label="Close modal">×</span>
+      <h3 id="modal-title"></h3>
+      <div id="modal-media"></div>
+      <p id="modal-description"></p>
+      <pre id="modal-code" class="code-block"></pre>
+      <a id="modal-link" href="#" target="_blank" class="btn">View Project</a>
     </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
