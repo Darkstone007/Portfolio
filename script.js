@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project data (manually update this array to add new projects)
   const projects = [
     {
-      title: 'Game Design (Unity)',
+      title: 'Intro to Computer Science Game', // Renamed from "Game Design (Unity)" to reflect course context
       description: 'A 2D platformer built with Unity and C#.',
       image: 'Media/game_design.jpg',
       code: `public class Player : MonoBehaviour {
@@ -66,14 +66,14 @@ void loop() {
       title: 'Poetry Portfolio',
       description: 'A collection of original poems.',
       image: 'Media/poetry.jpg',
-      link: 'https://www.tumblr.com/communities/nocturnus-poetry-from-the-soul', // Updated to provided Tumblr URL
+      link: 'https://www.tumblr.com/communities/nocturnus-poetry-from-the-soul', // Tumblr URL
       category: 'creative'
     },
     {
       title: 'Video Editing',
       description: 'A video editing project.',
       image: 'Media/Im movie.jpg',
-      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8', // Provided YouTube URL
+      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8', // YouTube URL
       link: 'https://github.com/darkstone007/video-editing', // GitHub repo link
       category: 'creative'
     },
@@ -81,7 +81,7 @@ void loop() {
       title: 'Interactive Media',
       description: 'An interactive media project.',
       image: 'Media/project1.jpg',
-      preview: 'https://darkstone007.github.io/Assignment1/', // Provided GitHub Pages URL
+      preview: 'https://darkstone007.github.io/Assignment1/', // GitHub Pages URL
       link: 'https://github.com/darkstone007/Assignment1', // GitHub repo link
       code: `function init() {
   console.log('Interactive media loaded');
@@ -92,7 +92,7 @@ void loop() {
       title: 'Digital Comic',
       description: 'A digital comic created in collaboration.',
       image: 'Media/project2.jpg',
-      preview: 'https://iam-agyenim.github.io/Comic/', // Provided GitHub Pages URL
+      preview: 'https://iam-agyenim.github.io/Comic/', // GitHub Pages URL
       link: 'https://github.com/iam-agyenim/Comic', // GitHub repo link
       category: 'creative'
     },
@@ -100,7 +100,7 @@ void loop() {
       title: 'Video Design',
       description: 'A project focused on video design.',
       image: 'Media/project3.jpg',
-      preview: 'https://tadilbek11kz.github.io/video-page/', // Provided GitHub Pages URL
+      preview: 'https://tadilbek11kz.github.io/video-page/', // GitHub Pages URL
       link: 'https://github.com/tadilbek11kz/video-page', // GitHub repo link
       category: 'creative'
     },
@@ -108,15 +108,15 @@ void loop() {
       title: 'Audio Page',
       description: 'An audio-focused project.',
       image: 'Media/project4.jpg',
-      preview: 'https://tadilbek11kz.github.io/audio-page/', // Provided GitHub Pages URL
+      preview: 'https://tadilbek11kz.github.io/audio-page/', // GitHub Pages URL
       link: 'https://github.com/tadilbek11kz/audio-page', // GitHub repo link
       category: 'creative'
     },
     {
       title: 'NYUADIM Profile',
       description: 'My interactive media profile.',
-      image: 'Media/nyuadim-icon.png', // Updated to use NYUADIM icon as project image
-      preview: 'https://intro.nyuadim.com/author/dzf3361/', // Provided NYUADIM URL
+      image: 'Media/nyuadim-icon.png', // NYUADIM icon as project image
+      preview: 'https://intro.nyuadim.com/author/dzf3361/', // NYUADIM URL
       link: 'https://intro.nyuadim.com/author/dzf3361/', // NYUADIM profile link
       category: 'creative'
     }
@@ -196,7 +196,7 @@ void loop() {
     photos.forEach(photo => {
       const card = document.createElement('div');
       card.className = 'media-card';
-      card.innerHTML = `<img src="${photo.src}" alt="${photo.title}">`;
+      card.innerHTML = `<img src="${photo.src}" alt="${project.title}">`;
       photoGallery.appendChild(card);
     });
   }
