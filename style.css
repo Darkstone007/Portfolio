@@ -11,7 +11,7 @@
 
 body, html {
   height: 100%;
-  background-color: #2B3A55; /* Muted blue-gray */
+  background: linear-gradient(to bottom, #2B3A55, #3E4E6C); /* Gradient background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body, html {
   text-align: center;
 }
 
-/* Container with subtle glassmorphism */
+/* Container with glassmorphism */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body, html {
   backdrop-filter: blur(8px);
 }
 
-/* Logo with animation */
+/* Logo */
 .logo-container {
   margin-bottom: 20px;
 }
@@ -58,11 +58,13 @@ body, html {
   color: #E8E8E8;
 }
 
-.welcome-text p {
-  font-size: 1.2rem;
+.welcome-text .tagline {
+  font-size: 1.5rem;
+  font-style: italic;
   font-weight: 300;
   color: #E8E8E8;
   margin-bottom: 30px;
+  animation: fadeIn 2s ease-in;
 }
 
 /* Enter Button */
@@ -76,8 +78,7 @@ body, html {
   background-color: #E8E8E8;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .enter-btn:hover {
@@ -87,14 +88,20 @@ body, html {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .welcome-text h1 {
     font-size: 2rem;
   }
 
-  .welcome-text p {
-    font-size: 1rem;
+  .welcome-text .tagline {
+    font-size: 1.2rem;
   }
 
   .enter-btn {
