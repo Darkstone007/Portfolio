@@ -167,8 +167,8 @@ void loop() {
               // Show confirmation dialog
               const confirmRedirect = window.confirm(`Do you want to stay or be redirected to the project "${project.title}"?`);
               if (confirmRedirect) {
-                // Redirect to the project URL in the same tab
-                window.location.href = url;
+                // Redirect to the project URL in a new tab
+                window.open(url, '_blank');
               }
               // If user cancels, stay on the page (no action needed)
             } else {
@@ -196,7 +196,7 @@ void loop() {
     photos.forEach(photo => {
       const card = document.createElement('div');
       card.className = 'media-card';
-      card.innerHTML = `<img src="${photo.src}" alt="${project.title}">`;
+      card.innerHTML = `<img src="${photo.src}" alt="${photo.title}">`;
       photoGallery.appendChild(card);
     });
   }
