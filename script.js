@@ -23,113 +23,142 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => observer.observe(section));
 
-  // Project data (manually update this array to add new projects)
+  // Project data for projects.html
   const projects = [
+    // Technical project: Unity-based 2D platformer
     {
-      title: 'Intro to Computer Science Game', // Renamed from "Game Design (Unity)" to reflect course context
-      description: 'A 2D platformer built with Unity and C#.',
+      title: 'Intro to Computer Science Game',
+      description: 'A 2D platformer built with Unity and C# for an NYUAD course.',
       image: 'Media/game_design.jpg',
       code: `public class Player : MonoBehaviour {
+  public float jumpForce = 5f;
+  private Rigidbody2D rb;
+
+  void Start() {
+    rb = GetComponent<Rigidbody2D>();
+  }
+
   void Update() {
     if (Input.GetKeyDown(KeyCode.Space)) {
       Jump();
     }
   }
+
+  void Jump() {
+    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+  }
 }`,
-      youtube: 'https://www.youtube.com/watch?v=sample_game', // Placeholder, needs real URL
-      preview: 'https://darkstone007.github.io/game-demo/', // Needs verification
-      link: 'https://github.com/darkstone007/game-design', // GitHub repo link
+      preview: 'https://darkstone007.github.io/game-demo/', // Verify this URL
+      link: 'https://github.com/darkstone007/game-design', // Verify GitHub repo
       category: 'technical'
     },
+    // Technical project: Arduino-based interactive installation
     {
       title: 'Physical Computing',
-      description: 'An interactive installation using Arduino.',
+      description: 'An interactive LED installation using Arduino.',
       image: 'Media/physical_computing.jpg',
       code: `void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
+
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
 }`,
-      link: 'https://github.com/darkstone007/physical-computing', // GitHub repo link
+      link: 'https://github.com/darkstone007/physical-computing', // Verify GitHub repo
       category: 'technical'
     },
+    // Technical project: CAD design for FSAE
     {
       title: 'FSAE Chassis Design',
       description: 'Designed chassis components using Fusion 360.',
       image: 'Media/chassis_design.jpg',
-      link: 'https://github.com/darkstone007/fsae-chassis', // GitHub repo link
+      link: 'https://github.com/darkstone007/fsae-chassis', // Verify GitHub repo
       category: 'technical'
     },
+    // Creative project: Poetry collection
     {
       title: 'Poetry Portfolio',
       description: 'A collection of original poems.',
       image: 'Media/poetry.jpg',
-      link: 'https://www.tumblr.com/communities/nocturnus-poetry-from-the-soul', // Tumblr URL
+      link: 'https://www.tumblr.com/communities/nocturnus-poetry-from-the-soul',
       category: 'creative'
     },
+    // Creative project: Video editing
     {
       title: 'Video Editing',
-      description: 'A video editing project.',
+      description: 'A video editing project showcasing storytelling.',
       image: 'Media/Im movie.jpg',
-      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8', // YouTube URL
-      link: 'https://github.com/darkstone007/video-editing', // GitHub repo link
+      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8',
+      link: 'https://github.com/darkstone007/video-editing', // Verify GitHub repo
       category: 'creative'
     },
+    // Technical project: Interactive media webpage
     {
       title: 'Interactive Media',
-      description: 'An interactive media project.',
+      description: 'An interactive webpage built with HTML, CSS, and JavaScript.',
       image: 'Media/project1.jpg',
-      preview: 'https://darkstone007.github.io/Assignment1/', // GitHub Pages URL
-      link: 'https://github.com/darkstone007/Assignment1', // GitHub repo link
+      preview: 'https://darkstone007.github.io/Assignment1/',
+      link: 'https://github.com/darkstone007/Assignment1',
       code: `function init() {
-  console.log('Interactive media loaded');
+  const canvas = document.createElement('canvas');
+  document.body.appendChild(canvas);
+  canvas.width = 400;
+  canvas.height = 400;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#C7B198';
+  ctx.fillRect(50, 50, 100, 100);
 }`,
       category: 'technical'
     },
+    // Creative project: Collaborative digital comic
     {
       title: 'Digital Comic',
       description: 'A digital comic created in collaboration.',
       image: 'Media/project2.jpg',
-      preview: 'https://iam-agyenim.github.io/Comic/', // GitHub Pages URL
-      link: 'https://github.com/iam-agyenim/Comic', // GitHub repo link
+      preview: 'https://iam-agyenim.github.io/Comic/',
+      link: 'https://github.com/iam-agyenim/Comic',
       category: 'creative'
     },
+    // Creative project: Video design webpage
     {
       title: 'Video Design',
-      description: 'A project focused on video design.',
+      description: 'A project focused on video design and presentation.',
       image: 'Media/project3.jpg',
-      preview: 'https://tadilbek11kz.github.io/video-page/', // GitHub Pages URL
-      link: 'https://github.com/tadilbek11kz/video-page', // GitHub repo link
+      preview: 'https://tadilbek11kz.github.io/video-page/',
+      link: 'https://github.com/tadilbek11kz/video-page',
       category: 'creative'
     },
+    // Creative project: Audio-focused webpage
     {
       title: 'Audio Page',
-      description: 'An audio-focused project.',
+      description: 'An audio-focused project with interactive elements.',
       image: 'Media/project4.jpg',
-      preview: 'https://tadilbek11kz.github.io/audio-page/', // GitHub Pages URL
-      link: 'https://github.com/tadilbek11kz/audio-page', // GitHub repo link
+      preview: 'https://tadilbek11kz.github.io/audio-page/',
+      link: 'https://github.com/tadilbek11kz/audio-page',
       category: 'creative'
     },
+    // Creative project: NYUADIM profile
     {
       title: 'NYUADIM Profile',
-      description: 'My interactive media profile.',
-      image: 'Media/nyuadim-icon.png', // NYUADIM icon as project image
-      preview: 'https://intro.nyuadim.com/author/dzf3361/', // NYUADIM URL
-      link: 'https://intro.nyuadim.com/author/dzf3361/', // NYUADIM profile link
+      description: 'My interactive media profile at NYU Abu Dhabi.',
+      image: 'Media/nyuadim-icon.png',
+      preview: 'https://intro.nyuadim.com/author/dzf3361/',
+      link: 'https://intro.nyuadim.com/author/dzf3361/',
       category: 'creative'
     }
   ];
 
-  // Photo data (manually update this array for media.html)
+  // Photo data for media.html
   const photos = [
     { title: 'India Trip', src: 'Media/india.jpg' },
     { title: 'Park with Friends', src: 'Media/Park.jpg' },
     { title: 'Podcast', src: 'Media/podcast.jpg' }
   ];
 
-  // Video data (manually update this array for media.html)
+  // Video data for media.html
   const videos = [
     {
       title: 'Website Creation Process',
@@ -250,28 +279,22 @@ void loop() {
       if (project.link) {
         modalLink.href = project.link;
         modalLink.style.display = 'inline-block';
-        console.log(`Project link set to: ${project.link}`); // Debug
       } else {
         modalLink.style.display = 'none';
-        console.log(`No project link for ${project.title}`);
       }
       // Handle YouTube link
       if (project.youtube) {
         modalYoutube.href = project.youtube;
         modalYoutube.style.display = 'inline-block';
-        console.log(`YouTube link set to: ${project.youtube}`);
       } else {
         modalYoutube.style.display = 'none';
-        console.log(`No YouTube link for ${project.title}`);
       }
       // Handle preview link
       if (project.preview) {
         modalPreview.href = project.preview;
         modalPreview.style.display = 'inline-block';
-        console.log(`Preview link set to: ${project.preview}`);
       } else {
         modalPreview.style.display = 'none';
-        console.log(`No preview link for ${project.title}`);
       }
       modal.style.display = 'flex';
     }
