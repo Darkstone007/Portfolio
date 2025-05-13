@@ -55,57 +55,22 @@ body, html {
   font-weight: 600;
   margin-bottom: 10px;
   color: #fff; /* White text */
+  animation: fadeInOut 4s infinite; /* Fading animation */
 }
 
-.welcome-text p {
+.welcome-text .tagline {
   font-size: 1.2rem;
   font-weight: 300;
   color: #ccc; /* Soft grey text */
   margin-bottom: 30px;
+  animation: fadeInOut 4s infinite; /* Fading animation */
 }
 
-/* Social Links */
-.social-links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #fff; /* White text for labels */
-  transition: transform 0.3s ease;
-}
-
-.social-links img {
-  width: 40px; /* Slightly larger icons */
-  height: 40px;
-  margin-right: 8px; /* Space between icon and text */
-  transition: transform 0.3s ease;
-}
-
-.social-links a:hover img {
-  transform: scale(1.2); /* Slight zoom on hover */
-}
-
-.social-links span {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-/* Instagram Feed */
-.instagram-feed {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
-}
-
-.instagram-feed iframe {
-  width: 100%;
-  height: 400px; /* Adjust height for widget */
+/* Fading Animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* Enter Button */
@@ -129,13 +94,57 @@ body, html {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Instagram Feed (for welcome.html) */
+.instagram-feed {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.instagram-feed iframe {
+  width: 100%;
+  height: 400px; /* Adjust height for widget */
+}
+
+/* Social Links (for welcome.html) */
+.social-links-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-links-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* White text for labels */
+  transition: transform 0.3s ease;
+}
+
+.social-links-container img {
+  width: 40px; /* Icon size */
+  height: 40px;
+  margin-right: 8px; /* Space between icon and text */
+  transition: transform 0.3s ease;
+}
+
+.social-links-container a:hover img {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.social-links-container span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .welcome-text h1 {
     font-size: 2rem;
   }
 
-  .welcome-text p {
+  .welcome-text .tagline {
     font-size: 1rem;
   }
 
@@ -143,12 +152,12 @@ body, html {
     padding: 10px 15px;
   }
 
-  .social-links img {
-    width: 32px; /* Slightly smaller on mobile */
+  .social-links-container img {
+    width: 32px; /* Smaller on mobile */
     height: 32px;
   }
 
-  .social-links span {
+  .social-links-container span {
     font-size: 0.9rem;
   }
 
