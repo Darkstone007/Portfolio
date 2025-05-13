@@ -36,8 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 }`,
-      youtube: 'https://youtu.be/sample_game',
+      youtube: 'https://www.youtube.com/watch?v=sample_game', // Replace with real YouTube URL
       preview: 'https://darkstone007.github.io/game-demo/',
+      link: 'https://github.com/darkstone007/game-design', // Added GitHub repo link
       category: 'technical'
     },
     {
@@ -51,32 +52,37 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
 }`,
+      link: 'https://github.com/darkstone007/physical-computing', // Added GitHub repo link
       category: 'technical'
     },
     {
       title: 'FSAE Chassis Design',
       description: 'Designed chassis components using Fusion 360.',
       image: 'Media/chassis_design.jpg',
+      link: 'https://github.com/darkstone007/fsae-chassis', // Added GitHub repo link
       category: 'technical'
     },
     {
       title: 'Poetry Portfolio',
       description: 'A collection of original poems.',
       image: 'Media/poetry.jpg',
+      link: 'https://intro.nyuadim.com/author/dzf3361/poetry', // Added external link
       category: 'creative'
     },
     {
       title: 'Film Project',
       description: 'A short film with scriptwriting and editing.',
       video: 'Media/film_project.mp4',
-      youtube: 'https://youtu.be/sample_film',
+      youtube: 'https://www.youtube.com/watch?v=sample_film', // Replace with real YouTube URL
+      link: 'https://github.com/darkstone007/film-project', // Added GitHub repo link
       category: 'creative'
     },
     {
       title: 'Video Editing',
       description: 'A video editing project.',
       image: 'Media/Im movie.jpg',
-      youtube: 'https://youtu.be/7Cle2RsJGl8?si=QmBFutBJ1Ju2ccX3',
+      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8',
+      link: 'https://github.com/darkstone007/video-editing', // Added GitHub repo link
       category: 'creative'
     },
     {
@@ -84,6 +90,7 @@ void loop() {
       description: 'An interactive media project.',
       image: 'Media/project1.jpg',
       preview: 'https://darkstone007.github.io/Assignment1/',
+      link: 'https://github.com/darkstone007/Assignment1', // Added GitHub repo link
       code: `function init() {
   console.log('Interactive media loaded');
 }`,
@@ -94,6 +101,7 @@ void loop() {
       description: 'A digital comic created in collaboration.',
       image: 'Media/project2.jpg',
       preview: 'https://iam-agyenim.github.io/Comic/',
+      link: 'https://github.com/iam-agyenim/Comic', // Added GitHub repo link
       category: 'creative'
     },
     {
@@ -101,6 +109,7 @@ void loop() {
       description: 'A project focused on video design.',
       image: 'Media/project3.jpg',
       preview: 'https://tadilbek11kz.github.io/video-page/',
+      link: 'https://github.com/tadilbek11kz/video-page', // Added GitHub repo link
       category: 'creative'
     },
     {
@@ -108,12 +117,14 @@ void loop() {
       description: 'An audio-focused project.',
       image: 'Media/project4.jpg',
       preview: 'https://tadilbek11kz.github.io/audio-page/',
+      link: 'https://github.com/tadilbek11kz/audio-page', // Added GitHub repo link
       category: 'creative'
     },
     {
       title: 'NYUADIM Profile',
       description: 'My interactive media profile.',
       preview: 'https://intro.nyuadim.com/author/dzf3361/',
+      link: 'https://intro.nyuadim.com/author/dzf3361/', // Added profile link
       category: 'creative'
     }
   ];
@@ -134,7 +145,7 @@ void loop() {
     },
     {
       title: 'Camera Setup for Portfolio',
-      src: 'https://www.youtube.com/embed/nDTWKTSzp40?si=XDYKQowcTNiH-9BS',
+      src: 'https://www.youtube.com/embed/5WCMzXnJwiM?si=XDYKQowcTNiH-9BS',
       type: 'iframe'
     }
   ];
@@ -214,6 +225,12 @@ void loop() {
         modalMedia.innerHTML = `<img src="${project.image}" alt="${project.title}">`;
       } else if (project.video) {
         modalMedia.innerHTML = `<video src="${project.video}" controls></video>`;
+      } else if (project.youtube) {
+        // Embed YouTube video in modal if available
+        const videoId = project.youtube.match(/(?:v=|youtu\.be\/)([^&?]+)/)?.[1];
+        if (videoId) {
+          modalMedia.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" title="${project.title}" frameborder="0" allowfullscreen></iframe>`;
+        }
       }
       if (project.code) {
         modalCode.textContent = project.code;
@@ -221,23 +238,32 @@ void loop() {
       } else {
         modalCode.style.display = 'none';
       }
+      // Handle project link
       if (project.link) {
         modalLink.href = project.link;
         modalLink.style.display = 'inline-block';
+        console.log(`Project link set to: ${project.link}`); // Debug
       } else {
         modalLink.style.display = 'none';
+        console.log(`No project link for ${project.title}`);
       }
+      // Handle YouTube link
       if (project.youtube) {
         modalYoutube.href = project.youtube;
         modalYoutube.style.display = 'inline-block';
+        console.log(`YouTube link set to: ${project.youtube}`);
       } else {
         modalYoutube.style.display = 'none';
+        console.log(`No YouTube link for ${project.title}`);
       }
+      // Handle preview link
       if (project.preview) {
         modalPreview.href = project.preview;
         modalPreview.style.display = 'inline-block';
+        console.log(`Preview link set to: ${project.preview}`);
       } else {
         modalPreview.style.display = 'none';
+        console.log(`No preview link for ${project.title}`);
       }
       modal.style.display = 'flex';
     }
@@ -245,12 +271,21 @@ void loop() {
     // Close modal on button click
     modalClose.addEventListener('click', () => {
       modal.style.display = 'none';
+      // Stop any playing YouTube video
+      const iframe = modalMedia.querySelector('iframe');
+      if (iframe) {
+        iframe.src = iframe.src; // Reset iframe to stop video
+      }
     });
 
     // Close modal on outside click
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
+        const iframe = modalMedia.querySelector('iframe');
+        if (iframe) {
+          iframe.src = iframe.src; // Reset iframe to stop video
+        }
       }
     });
   }
