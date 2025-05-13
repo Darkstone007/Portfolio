@@ -2,7 +2,7 @@
 
 // Wait for DOM to load before executing
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme toggle functionality
+  // Theme toggle functionality for dark/light mode
   const themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 }`,
-      youtube: 'https://www.youtube.com/watch?v=sample_game', // Placeholder, no provided URL
-      preview: 'https://darkstone007.github.io/game-demo/', // Existing preview, needs verification
-      link: 'https://github.com/darkstone007/game-design', // Existing GitHub repo link
+      youtube: 'https://www.youtube.com/watch?v=sample_game', // Placeholder, needs real URL
+      preview: 'https://darkstone007.github.io/game-demo/', // Needs verification
+      link: 'https://github.com/darkstone007/game-design', // GitHub repo link
       category: 'technical'
     },
     {
@@ -52,45 +52,37 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
 }`,
-      link: 'https://github.com/darkstone007/physical-computing', // Existing GitHub repo link
+      link: 'https://github.com/darkstone007/physical-computing', // GitHub repo link
       category: 'technical'
     },
     {
       title: 'FSAE Chassis Design',
       description: 'Designed chassis components using Fusion 360.',
       image: 'Media/chassis_design.jpg',
-      link: 'https://github.com/darkstone007/fsae-chassis', // Existing GitHub repo link
+      link: 'https://github.com/darkstone007/fsae-chassis', // GitHub repo link
       category: 'technical'
     },
     {
       title: 'Poetry Portfolio',
       description: 'A collection of original poems.',
       image: 'Media/poetry.jpg',
-      link: 'https://intro.nyuadim.com/author/dzf3361/poetry', // Existing external link
-      category: 'creative'
-    },
-    {
-      title: 'Film Project',
-      description: 'A short film with scriptwriting and editing.',
-      video: 'Media/film_project.mp4',
-      youtube: 'https://www.youtube.com/watch?v=sample_film', // Placeholder, no provided URL
-      link: 'https://github.com/darkstone007/film-project', // Existing GitHub repo link
+      link: 'https://www.tumblr.com/communities/nocturnus-poetry-from-the-soul', // Updated to provided Tumblr URL
       category: 'creative'
     },
     {
       title: 'Video Editing',
       description: 'A video editing project.',
       image: 'Media/Im movie.jpg',
-      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8', // Added provided YouTube URL
-      link: 'https://github.com/darkstone007/video-editing', // Existing GitHub repo link
+      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8', // Provided YouTube URL
+      link: 'https://github.com/darkstone007/video-editing', // GitHub repo link
       category: 'creative'
     },
     {
       title: 'Interactive Media',
       description: 'An interactive media project.',
       image: 'Media/project1.jpg',
-      preview: 'https://darkstone007.github.io/Assignment1/', // Added provided GitHub Pages URL
-      link: 'https://github.com/darkstone007/Assignment1', // Existing GitHub repo link
+      preview: 'https://darkstone007.github.io/Assignment1/', // Provided GitHub Pages URL
+      link: 'https://github.com/darkstone007/Assignment1', // GitHub repo link
       code: `function init() {
   console.log('Interactive media loaded');
 }`,
@@ -100,43 +92,44 @@ void loop() {
       title: 'Digital Comic',
       description: 'A digital comic created in collaboration.',
       image: 'Media/project2.jpg',
-      preview: 'https://iam-agyenim.github.io/Comic/', // Added provided GitHub Pages URL
-      link: 'https://github.com/iam-agyenim/Comic', // Existing GitHub repo link
+      preview: 'https://iam-agyenim.github.io/Comic/', // Provided GitHub Pages URL
+      link: 'https://github.com/iam-agyenim/Comic', // GitHub repo link
       category: 'creative'
     },
     {
       title: 'Video Design',
       description: 'A project focused on video design.',
       image: 'Media/project3.jpg',
-      preview: 'https://tadilbek11kz.github.io/video-page/', // Added provided GitHub Pages URL
-      link: 'https://github.com/tadilbek11kz/video-page', // Existing GitHub repo link
+      preview: 'https://tadilbek11kz.github.io/video-page/', // Provided GitHub Pages URL
+      link: 'https://github.com/tadilbek11kz/video-page', // GitHub repo link
       category: 'creative'
     },
     {
       title: 'Audio Page',
       description: 'An audio-focused project.',
       image: 'Media/project4.jpg',
-      preview: 'https://tadilbek11kz.github.io/audio-page/', // Added provided GitHub Pages URL
-      link: 'https://github.com/tadilbek11kz/audio-page', // Existing GitHub repo link
+      preview: 'https://tadilbek11kz.github.io/audio-page/', // Provided GitHub Pages URL
+      link: 'https://github.com/tadilbek11kz/audio-page', // GitHub repo link
       category: 'creative'
     },
     {
       title: 'NYUADIM Profile',
       description: 'My interactive media profile.',
-      preview: 'https://intro.nyuadim.com/author/dzf3361/', // Added provided NYUADIM URL
-      link: 'https://intro.nyuadim.com/author/dzf3361/', // Existing profile link
+      image: 'Media/nyuadim-icon.png', // Updated to use NYUADIM icon as project image
+      preview: 'https://intro.nyuadim.com/author/dzf3361/', // Provided NYUADIM URL
+      link: 'https://intro.nyuadim.com/author/dzf3361/', // NYUADIM profile link
       category: 'creative'
     }
   ];
 
-  // Photo data (manually update this array)
+  // Photo data (manually update this array for media.html)
   const photos = [
     { title: 'India Trip', src: 'Media/india.jpg' },
     { title: 'Park with Friends', src: 'Media/Park.jpg' },
     { title: 'Podcast', src: 'Media/podcast.jpg' }
   ];
 
-  // Video data (manually update this array)
+  // Video data (manually update this array for media.html)
   const videos = [
     {
       title: 'Website Creation Process',
@@ -166,7 +159,22 @@ void loop() {
             ${project.image ? `<img src="${project.image}" alt="${project.title}">` : ''}
             ${project.video ? `<video src="${project.video}" controls></video>` : ''}
           `;
-          card.addEventListener('click', () => openModal(project));
+          // Handle click to show confirmation dialog and redirect
+          card.addEventListener('click', () => {
+            // Determine the primary URL (preview > youtube > link)
+            const url = project.preview || project.youtube || project.link || null;
+            if (url) {
+              // Show confirmation dialog
+              const confirmRedirect = window.confirm(`Do you want to stay or be redirected to the project "${project.title}"?`);
+              if (confirmRedirect) {
+                // Redirect to the project URL in the same tab
+                window.location.href = url;
+              }
+              // If user cancels, stay on the page (no action needed)
+            } else {
+              console.log(`No URL available for ${project.title}`);
+            }
+          });
           projectGallery.appendChild(card);
         });
     }
@@ -204,7 +212,7 @@ void loop() {
     });
   }
 
-  // Modal functionality for projects
+  // Modal functionality for projects (retained but unused for card clicks)
   const modal = document.getElementById('project-modal');
   if (modal) {
     const modalTitle = document.getElementById('modal-title');
@@ -216,7 +224,7 @@ void loop() {
     const modalPreview = document.getElementById('modal-preview');
     const modalClose = document.getElementById('modal-close');
 
-    // Open modal with project details
+    // Open modal with project details (not triggered by card clicks)
     function openModal(project) {
       modalTitle.textContent = project.title;
       modalDescription.textContent = project.description;
