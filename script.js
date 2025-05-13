@@ -30,6 +30,50 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project data from CV and previous site
   const projects = [
     {
+      title: 'Game Design (Unity)',
+      description: 'A 2D platformer built with Unity and C#, featuring custom mechanics and storytelling.',
+      image: 'Media/game_design.jpg',
+      code: `public class Player : MonoBehaviour {
+  void Update() {
+    if (Input.GetKeyDown(KeyCode.Space)) {
+      Jump();
+    }
+  }
+}`,
+      category: 'technical',
+    },
+    {
+      title: 'Physical Computing',
+      description: 'An interactive installation using Arduino, LEDs, and sensors.',
+      image: 'Media/physical_computing.jpg',
+      code: `void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+}`,
+      category: 'technical',
+    },
+    {
+      title: 'FSAE Chassis Design',
+      description: 'Designed chassis components using Fusion 360 for NYUAD’s FSAE team.',
+      image: 'Media/chassis_design.jpg',
+      category: 'technical',
+    },
+    {
+      title: 'Poetry Portfolio',
+      description: 'A collection of original poems exploring identity and philosophy.',
+      image: 'Media/poetry.jpg',
+      category: 'creative',
+    },
+    {
+      title: 'Film Project',
+      description: 'A short film with scriptwriting, acting, and editing using Adobe Premiere.',
+      video: 'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4',
+      category: 'creative',
+    },
+    {
       title: 'Video Editing',
       description: 'A video editing project showcasing storytelling through visuals.',
       image: 'Media/Im movie.jpg',
@@ -65,44 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'An audio-focused project with creative sound design.',
       image: 'Media/project4.jpg',
       link: 'https://tadilbek11kz.github.io/audio-page/',
-      category: 'creative',
-    },
-    {
-      title: 'Game Design (Unity)',
-      description: 'A 2D platformer built with Unity and C#.',
-      image: 'Media/game_design.jpg',
-      code: `public class Player : MonoBehaviour {
-  void Update() {
-    if (Input.GetKeyDown(KeyCode.Space)) {
-      Jump();
-    }
-  }
-}`,
-      category: 'technical',
-    },
-    {
-      title: 'Physical Computing',
-      description: 'An interactive installation using Arduino, LEDs, and sensors.',
-      image: 'Media/physical_computing.jpg',
-      code: `void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-}
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-}`,
-      category: 'technical',
-    },
-    {
-      title: 'FSAE Chassis Design',
-      description: 'Designed chassis components using Fusion 360.',
-      image: 'Media/chassis_design.jpg',
-      category: 'technical',
-    },
-    {
-      title: 'Poetry Portfolio',
-      description: 'A collection of original poems exploring identity and philosophy.',
-      image: 'Media/poetry.jpg',
       category: 'creative',
     },
     {
