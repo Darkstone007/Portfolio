@@ -67,7 +67,7 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }`,
-      link: 'https://github.com/darkstone007/physical-computing', // Verify GitHub repo
+      link: 'https://intro.nyuadim.com/2025/05/09/finial-project/', // Verify GitHub repo
       category: 'technical'
     },
     // Technical project: CAD design for FSAE
