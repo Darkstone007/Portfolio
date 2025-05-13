@@ -1,7 +1,9 @@
-/* Import Google Fonts */
+/* Styles for the landing page (index.html) */
+
+/* Import Google Fonts: Poppins for headings, Roboto for body */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap');
 
-/* Reset and Global Styles */
+/* Reset default styles for consistency */
 * {
   margin: 0;
   padding: 0;
@@ -9,17 +11,18 @@
   font-family: 'Roboto', Arial, sans-serif;
 }
 
+/* Full-screen layout with gradient background */
 body, html {
   height: 100%;
-  background: linear-gradient(to bottom, #2B3A55, #3E4E6C); /* Gradient background */
+  background: linear-gradient(to bottom, #1C2526, #2E3A3B); /* Dark teal gradient */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #E8E8E8;
+  color: #F4F4F9; /* Off-white text */
   text-align: center;
 }
 
-/* Container with glassmorphism */
+/* Main container with glassmorphism effect */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -28,73 +31,72 @@ body, html {
   padding: 20px;
   width: 100%;
   max-width: 800px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* Frosted glass effect */
 }
 
-/* Logo */
+/* Logo styling */
 .logo-container {
   margin-bottom: 20px;
 }
 
 .logo-container img {
-  width: 150px;
+  width: 120px; /* Fixed width for logo */
   height: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth hover scaling */
 }
 
 .logo-container img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Welcome Text */
+/* Welcome text styling */
 .welcome-text h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #E8E8E8;
+  color: #F4F4F9; /* Off-white */
 }
 
 .welcome-text .tagline {
   font-size: 1.5rem;
   font-style: italic;
   font-weight: 300;
-  color: #E8E8E8;
+  color: #F4F4F9;
   margin-bottom: 30px;
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 2s ease-in; /* Fade-in animation */
 }
 
-/* Enter Button */
+/* Enter button styling */
 .enter-btn {
   display: inline-block;
   padding: 12px 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #2B3A55;
-  background-color: #E8E8E8;
+  color: #1C2526; /* Dark teal text */
+  background-color: #F4F4F9; /* Off-white background */
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
 .enter-btn:hover {
-  background-color: #3A8B8C;
-  color: #E8E8E8;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  background-color: #C7B198; /* Beige accent */
+  color: #F4F4F9;
+  transform: translateY(-3px); /* Lift effect */
 }
 
-/* Animation */
+/* Fade-in animation for tagline */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Responsive Design */
+/* Responsive design for smaller screens */
 @media (max-width: 600px) {
   .welcome-text h1 {
     font-size: 2rem;
