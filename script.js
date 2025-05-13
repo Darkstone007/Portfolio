@@ -159,7 +159,7 @@ void loop() {
             ${project.image ? `<img src="${project.image}" alt="${project.title}">` : ''}
             ${project.video ? `<video src="${project.video}" controls></video>` : ''}
           `;
-          // Handle click to show confirmation dialog and redirect
+          // Handle click to show confirmation dialog and redirect in new tab
           card.addEventListener('click', () => {
             // Determine the primary URL (preview > youtube > link)
             const url = project.preview || project.youtube || project.link || null;
@@ -167,10 +167,10 @@ void loop() {
               // Show confirmation dialog
               const confirmRedirect = window.confirm(`Do you want to stay or be redirected to the project "${project.title}"?`);
               if (confirmRedirect) {
-                // Redirect to the project URL in a new tab
+                // Open the project URL in a new tab
                 window.open(url, '_blank');
               }
-              // If user cancels, stay on the page (no action needed)
+              // If user cancels, stay on the page
             } else {
               console.log(`No URL available for ${project.title}`);
             }
