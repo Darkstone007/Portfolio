@@ -1,25 +1,25 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap');
 
 /* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 body, html {
   height: 100%;
-  background-color: #111; /* Dark black background */
+  background-color: #2B3A55; /* Muted blue-gray */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #E8E8E8;
   text-align: center;
 }
 
-/* Container */
+/* Container with subtle glassmorphism */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -28,19 +28,19 @@ body, html {
   padding: 20px;
   width: 100%;
   max-width: 800px;
-  background: rgba(255, 255, 255, 0.05); /* Subtle transparent background */
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
 }
 
-/* Logo */
+/* Logo with animation */
 .logo-container {
   margin-bottom: 20px;
 }
 
 .logo-container img {
-  width: 150px; /* Adjust the size of the logo */
+  width: 150px;
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -51,16 +51,17 @@ body, html {
 
 /* Welcome Text */
 .welcome-text h1 {
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #fff; /* White text */
+  color: #E8E8E8;
 }
 
 .welcome-text p {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #ccc; /* Soft grey text */
+  color: #E8E8E8;
   margin-bottom: 30px;
 }
 
@@ -68,10 +69,11 @@ body, html {
 .enter-btn {
   display: inline-block;
   padding: 12px 20px;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #111; /* Dark text for contrast */
-  background-color: #fff; /* White button */
+  color: #2B3A55;
+  background-color: #E8E8E8;
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -79,8 +81,8 @@ body, html {
 }
 
 .enter-btn:hover {
-  background-color: #444;
-  color: #fff;
+  background-color: #3A8B8C;
+  color: #E8E8E8;
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
