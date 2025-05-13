@@ -1,4 +1,4 @@
-// JavaScript for interactivity across all pages
+// JavaScript for interactivity across all portfolio pages
 
 // Wait for DOM to load before executing
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 }`,
-      youtube: 'https://www.youtube.com/watch?v=sample_game', // Replace with real YouTube URL
-      preview: 'https://darkstone007.github.io/game-demo/',
-      link: 'https://github.com/darkstone007/game-design', // Added GitHub repo link
+      youtube: 'https://www.youtube.com/watch?v=sample_game', // Placeholder, no provided URL
+      preview: 'https://darkstone007.github.io/game-demo/', // Existing preview, needs verification
+      link: 'https://github.com/darkstone007/game-design', // Existing GitHub repo link
       category: 'technical'
     },
     {
@@ -52,45 +52,45 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
 }`,
-      link: 'https://github.com/darkstone007/physical-computing', // Added GitHub repo link
+      link: 'https://github.com/darkstone007/physical-computing', // Existing GitHub repo link
       category: 'technical'
     },
     {
       title: 'FSAE Chassis Design',
       description: 'Designed chassis components using Fusion 360.',
       image: 'Media/chassis_design.jpg',
-      link: 'https://github.com/darkstone007/fsae-chassis', // Added GitHub repo link
+      link: 'https://github.com/darkstone007/fsae-chassis', // Existing GitHub repo link
       category: 'technical'
     },
     {
       title: 'Poetry Portfolio',
       description: 'A collection of original poems.',
       image: 'Media/poetry.jpg',
-      link: 'https://intro.nyuadim.com/author/dzf3361/poetry', // Added external link
+      link: 'https://intro.nyuadim.com/author/dzf3361/poetry', // Existing external link
       category: 'creative'
     },
     {
       title: 'Film Project',
       description: 'A short film with scriptwriting and editing.',
       video: 'Media/film_project.mp4',
-      youtube: 'https://www.youtube.com/watch?v=sample_film', // Replace with real YouTube URL
-      link: 'https://github.com/darkstone007/film-project', // Added GitHub repo link
+      youtube: 'https://www.youtube.com/watch?v=sample_film', // Placeholder, no provided URL
+      link: 'https://github.com/darkstone007/film-project', // Existing GitHub repo link
       category: 'creative'
     },
     {
       title: 'Video Editing',
       description: 'A video editing project.',
       image: 'Media/Im movie.jpg',
-      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8',
-      link: 'https://github.com/darkstone007/video-editing', // Added GitHub repo link
+      youtube: 'https://www.youtube.com/watch?v=7Cle2RsJGl8', // Added provided YouTube URL
+      link: 'https://github.com/darkstone007/video-editing', // Existing GitHub repo link
       category: 'creative'
     },
     {
       title: 'Interactive Media',
       description: 'An interactive media project.',
       image: 'Media/project1.jpg',
-      preview: 'https://darkstone007.github.io/Assignment1/',
-      link: 'https://github.com/darkstone007/Assignment1', // Added GitHub repo link
+      preview: 'https://darkstone007.github.io/Assignment1/', // Added provided GitHub Pages URL
+      link: 'https://github.com/darkstone007/Assignment1', // Existing GitHub repo link
       code: `function init() {
   console.log('Interactive media loaded');
 }`,
@@ -100,31 +100,31 @@ void loop() {
       title: 'Digital Comic',
       description: 'A digital comic created in collaboration.',
       image: 'Media/project2.jpg',
-      preview: 'https://iam-agyenim.github.io/Comic/',
-      link: 'https://github.com/iam-agyenim/Comic', // Added GitHub repo link
+      preview: 'https://iam-agyenim.github.io/Comic/', // Added provided GitHub Pages URL
+      link: 'https://github.com/iam-agyenim/Comic', // Existing GitHub repo link
       category: 'creative'
     },
     {
       title: 'Video Design',
       description: 'A project focused on video design.',
       image: 'Media/project3.jpg',
-      preview: 'https://tadilbek11kz.github.io/video-page/',
-      link: 'https://github.com/tadilbek11kz/video-page', // Added GitHub repo link
+      preview: 'https://tadilbek11kz.github.io/video-page/', // Added provided GitHub Pages URL
+      link: 'https://github.com/tadilbek11kz/video-page', // Existing GitHub repo link
       category: 'creative'
     },
     {
       title: 'Audio Page',
       description: 'An audio-focused project.',
       image: 'Media/project4.jpg',
-      preview: 'https://tadilbek11kz.github.io/audio-page/',
-      link: 'https://github.com/tadilbek11kz/audio-page', // Added GitHub repo link
+      preview: 'https://tadilbek11kz.github.io/audio-page/', // Added provided GitHub Pages URL
+      link: 'https://github.com/tadilbek11kz/audio-page', // Existing GitHub repo link
       category: 'creative'
     },
     {
       title: 'NYUADIM Profile',
       description: 'My interactive media profile.',
-      preview: 'https://intro.nyuadim.com/author/dzf3361/',
-      link: 'https://intro.nyuadim.com/author/dzf3361/', // Added profile link
+      preview: 'https://intro.nyuadim.com/author/dzf3361/', // Added provided NYUADIM URL
+      link: 'https://intro.nyuadim.com/author/dzf3361/', // Existing profile link
       category: 'creative'
     }
   ];
