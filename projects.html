@@ -1,34 +1,36 @@
-<!-- Projects page showcasing David's work -->
+<!-- Projects page showcasing David Ziklag Foster's work -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta tags -->
+  <!-- Meta tags for SEO and responsiveness -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projects by David Ziklag Foster.">
+  <meta name="description" content="Projects by David Ziklag Foster in interactive media, engineering, and creative fields.">
   <title>Projects | David Ziklag Foster</title>
+  <!-- Google Fonts for Poppins (headings) and Roboto (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Main styles for portfolio pages -->
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <!-- Sidebar -->
+  <!-- Sidebar navigation -->
   <div class="sidebar">
     <div class="logo">
-      <a href="index.html"><img src="Media/logo.png" alt="DZF Logo"></a>
+      <a href="welcome.html"><img src="Media/logo.png" alt="DZF Logo"></a>
     </div>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="welcome.html">Welcome</a></li>
+      <li><a href="welcome.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="uploads.html">Uploads</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <!-- Dark/light mode toggle button -->
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
-  <!-- Main content -->
+  <!-- Main content area -->
   <div class="content">
+    <!-- Projects section -->
     <section class="section">
       <h1>Projects</h1>
       <!-- Filter buttons for project categories -->
@@ -40,7 +42,7 @@
       <!-- Project grid (populated by script.js) -->
       <div id="project-gallery" class="project-grid"></div>
     </section>
-    <!-- Modal for project details -->
+    <!-- Modal for project details (unused for card clicks) -->
     <div id="project-modal" class="modal">
       <div class="modal-content">
         <span id="modal-close" class="modal-close" role="button" aria-label="Close modal">×</span>
@@ -54,6 +56,7 @@
       </div>
     </div>
   </div>
+  <!-- JavaScript for interactivity -->
   <script src="script.js"></script>
 </body>
 </html>
