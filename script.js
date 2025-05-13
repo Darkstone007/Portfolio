@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Game Design (Unity)',
       description: 'A 2D platformer built with Unity and C#.',
-      image: 'Media/game_design.jpg', // Place image in Media/
+      image: 'Media/game_design.jpg',
       code: `public class Player : MonoBehaviour {
   void Update() {
     if (Input.GetKeyDown(KeyCode.Space)) {
@@ -68,7 +68,7 @@ void loop() {
     {
       title: 'Film Project',
       description: 'A short film with scriptwriting and editing.',
-      video: 'Media/film_project.mp4', // Place video in Media/
+      video: 'Media/film_project.mp4',
       youtube: 'https://youtu.be/sample_film',
       category: 'creative'
     },
