@@ -1,28 +1,25 @@
-/* Styles for the landing page (index.html) */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Import Google Fonts: Poppins for headings, Roboto for body */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap');
-
-/* Reset default styles for consistency */
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
-/* Full-screen layout with gradient background */
 body, html {
   height: 100%;
-  background: linear-gradient(to bottom, #1C2526, #2E3A3B); /* Dark teal gradient */
+  background-color: #111; /* Dark black background */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #F4F4F9; /* Off-white text */
+  color: #fff;
   text-align: center;
 }
 
-/* Main container with glassmorphism effect */
+/* Container */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -31,82 +28,115 @@ body, html {
   padding: 20px;
   width: 100%;
   max-width: 800px;
-  background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.05); /* Subtle transparent background */
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px); /* Frosted glass effect */
+  backdrop-filter: blur(8px);
 }
 
-/* Logo styling */
+/* Logo */
 .logo-container {
   margin-bottom: 20px;
 }
 
 .logo-container img {
-  width: 120px; /* Fixed width for logo */
+  width: 150px; /* Adjust the size of the logo */
   height: auto;
-  transition: transform 0.3s ease; /* Smooth hover scaling */
+  transition: transform 0.3s ease;
 }
 
 .logo-container img:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
 }
 
-/* Welcome text styling */
+/* Welcome Text */
 .welcome-text h1 {
-  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #F4F4F9; /* Off-white */
+  color: #fff; /* White text */
 }
 
-.welcome-text .tagline {
-  font-size: 1.5rem;
-  font-style: italic;
+.welcome-text p {
+  font-size: 1.2rem;
   font-weight: 300;
-  color: #F4F4F9;
+  color: #ccc; /* Soft grey text */
   margin-bottom: 30px;
-  animation: fadeIn 2s ease-in; /* Fade-in animation */
 }
 
-/* Enter button styling */
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* White text for labels */
+  transition: transform 0.3s ease;
+}
+
+.social-links img {
+  width: 40px; /* Slightly larger icons */
+  height: 40px;
+  margin-right: 8px; /* Space between icon and text */
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.social-links span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Enter Button */
 .enter-btn {
   display: inline-block;
   padding: 12px 20px;
-  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #1C2526; /* Dark teal text */
-  background-color: #F4F4F9; /* Off-white background */
+  color: #111; /* Dark text for contrast */
+  background-color: #fff; /* White button */
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .enter-btn:hover {
-  background-color: #C7B198; /* Beige accent */
-  color: #F4F4F9;
-  transform: translateY(-3px); /* Lift effect */
+  background-color: #444;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Fade-in animation for tagline */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Responsive design for smaller screens */
+/* Responsive Design */
 @media (max-width: 600px) {
   .welcome-text h1 {
     font-size: 2rem;
   }
 
-  .welcome-text .tagline {
-    font-size: 1.2rem;
+  .welcome-text p {
+    font-size: 1rem;
   }
 
   .enter-btn {
     padding: 10px 15px;
+  }
+
+  .social-links img {
+    width: 32px; /* Slightly smaller on mobile */
+    height: 32px;
+  }
+
+  .social-links span {
+    font-size: 0.9rem;
   }
 }
