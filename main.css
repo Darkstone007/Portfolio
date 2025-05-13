@@ -249,19 +249,21 @@ body {
   margin: 20px auto;
 }
 
-.instagram-feed iframe {
+.instagram-feed iframe.lightwidget-widget {
   width: 100%;
   height: 400px; /* Adjust height for widget */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact links styling */
 .contact-links a {
-  color: #C7B198; /* Beige links */
+  color: #1C2526; /* Dark teal for readability */
   text-decoration: none;
 }
 
 .contact-links a:hover {
-  text-decoration: underline;
+  color: #C7B198; /* Beige on hover */
 }
 
 /* Modal for project details */
@@ -342,6 +344,15 @@ body {
 
 .dark-mode .code-block {
   background: #3A4748;
+}
+
+.dark-mode .social-links-container a,
+.dark-mode .contact-links a {
+  color: #F4F4F9; /* Off-white in dark mode */
+}
+
+.dark-mode .contact-links a:hover {
+  color: #C7B198; /* Beige on hover */
 }
 
 /* Fade-in animation */
