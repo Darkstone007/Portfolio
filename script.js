@@ -161,13 +161,13 @@ void loop() {
   // Video data for media.html
   const videos = [
     {
-      title: 'Website Creation Process',
+      title: 'Camera Setup for Portfolio',
       src: 'https://www.youtube.com/embed/P02uKRqClg0?si=U2xBHH0yb2vCsSLb',
       type: 'iframe'
     },
     {
-      title: 'Camera Setup for Portfolio',
-      src: 'https://www.youtube.com/embed/5WCMzXnJwiM?si=XDYKQowcTNiH-9BS',
+      title: 'Website Creation Process',
+      src: 'https://www.youtube.com/embed/nDTWKTSzp40?si=M2kTasxpYBEsbxyh',
       type: 'iframe'
     }
   ];
